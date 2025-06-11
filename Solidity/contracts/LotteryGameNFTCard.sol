@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.18;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -253,7 +253,7 @@ contract LotteryGameNFTCard is ERC1155, Ownable {
             uint256[] memory totalBalances, 
             uint256[] memory lockedBalances, 
             uint256[] memory unlockedBalances
-        ) 
+        )
     {
         totalBalances = new uint256[](NUM_CARD_TYPES);
         lockedBalances = new uint256[](NUM_CARD_TYPES);

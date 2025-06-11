@@ -4,9 +4,9 @@ const { deployMetadata } = require("hardhat");
 require('dotenv').config()
 
 // Pull contract arguments from .env
-const tokenArgs = ['0x004277f1f4909f4ac710BBC6056F298fa29cBbeC', '0x004F95fa7874B0b982eF945Eeef22E5b64BDFDcE', '0x001699Eed9230d3799245300A4993cCd8bac2706']
+const tokenArgs = ['0x0028743cE5e1EDAca8b6c2ABBab0763eb1fd3fE3', '0x003E5ff9bD6205Cb435b0D2a85e2FA9b87484e6C', '0x001699Eed9230d3799245300A4993cCd8bac2706']
 
-async function deployERC20() {
+async function deployLotteryGame() {
   // Config provider, wallet, and contract factory
   const provider = new quais.JsonRpcProvider(hre.network.config.url, undefined, { usePathing: true })
   const wallet = new quais.Wallet(hre.network.config.accounts[0], provider)
@@ -22,7 +22,7 @@ async function deployERC20() {
   console.log('Contract deployed to: ', await game.getAddress())
 }
 
-deployERC20()
+deployLotteryGame()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error)
