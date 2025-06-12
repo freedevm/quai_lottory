@@ -42,12 +42,12 @@ contract LotteryGameNFTCard is ERC1155, Ownable {
 
         // Initialize card prices (in wei)
         cardPrices = [
-            0.5 ether,  // Diamond
-            0.4 ether,  // Platinum
-            0.3 ether,  // Gold
-            0.2 ether,  // Silver
-            0.1 ether,  // Bronze
-            0.05 ether  // Iron
+            200 ether,  // Diamond
+            160 ether,  // Platinum
+            120 ether,  // Gold
+            80 ether,  // Silver
+            40 ether,  // Bronze
+            20 ether  // Iron
         ];
 
         // Initialize boost values for each card type

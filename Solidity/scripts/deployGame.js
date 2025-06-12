@@ -4,7 +4,7 @@ const { deployMetadata } = require("hardhat");
 require('dotenv').config()
 
 // Pull contract arguments from .env
-const tokenArgs = ['0x0028743cE5e1EDAca8b6c2ABBab0763eb1fd3fE3', '0x003E5ff9bD6205Cb435b0D2a85e2FA9b87484e6C', '0x001699Eed9230d3799245300A4993cCd8bac2706']
+const tokenArgs = [process.env.lotteryGameNFTCard, process.env.lotterySetting, '0x001699Eed9230d3799245300A4993cCd8bac2706']
 
 async function deployLotteryGame() {
   // Config provider, wallet, and contract factory

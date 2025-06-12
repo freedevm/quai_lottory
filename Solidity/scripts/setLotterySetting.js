@@ -15,10 +15,10 @@ async function main() {
     const randomTenRewardPercent = 1000; // 10%
     const megaJackpotFee = 5000; // 50%
     const teamSharePercent = 5000; // 50%
-    const entryPrice = hre.ethers.parseEther("0.02"); // 0.05 ETH
-    const minJackpotSize = hre.ethers.parseEther("0.1"); // 1 ETH
-    const maxJackpotSize = hre.ethers.parseEther("10"); // 10 ETH
-    const maxMegaJackpot = hre.ethers.parseEther("100"); // 100 ETH
+    const entryPrice = hre.ethers.parseEther("20"); // 0.05 ETH
+    const minJackpotSize = hre.ethers.parseEther("200"); // 1 ETH
+    const maxJackpotSize = hre.ethers.parseEther("2000"); // 10 ETH
+    const maxMegaJackpot = hre.ethers.parseEther("1000000"); // 100 ETH
 
     // console.log("Configuring reward distribution...");
     // let tx = await setting.setRewardDistribution(taxPercent, mainRewardPercent, randomTenRewardPercent);

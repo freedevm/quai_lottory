@@ -14,10 +14,10 @@ contract LotterySetting is Ownable {
     uint256 public TEAM_SHARE_PERCENT = 5000; // 50% of tax
 
     // Game settings
-    uint256 public ENTRY_PRICE = 0.05 ether;
-    uint256 public MIN_JACKPOT_SIZE = 1 ether;
-    uint256 public MAX_JACKPOT_SIZE = 10 ether;
-    uint256 public MAX_MEGA_JACKPOT = 100 ether;
+    uint256 public ENTRY_PRICE = 20 ether;
+    uint256 public MIN_JACKPOT_SIZE = 200 ether;
+    uint256 public MAX_JACKPOT_SIZE = 2000 ether;
+    uint256 public MAX_MEGA_JACKPOT = 1000000 ether;
 
     constructor() Ownable(msg.sender) {}
 
