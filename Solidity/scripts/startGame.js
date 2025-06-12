@@ -22,7 +22,7 @@ async function startGame() {
     // const cardGameAddress = await cardContractSigner.lotteryGame();
     // console.log("cardGameAddress", cardGameAddress)
 
-    const JackPotSize = ethers.parseEther('2');
+    const JackPotSize = ethers.parseEther('200');
     const txData = await gameContractSigner.startGame(JackPotSize);
     await txData.wait();
 }

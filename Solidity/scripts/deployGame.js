@@ -1,5 +1,6 @@
 const quais = require('quais')
 const LotteryGameJson = require('../artifacts/contracts/LotteryGame.sol/LotteryGame.json')
+const LotteryGameCardJson = require('../artifacts/contracts/LotteryGameNFTCard.sol/LotteryGameNFTCard.json')
 const { deployMetadata } = require("hardhat");
 require('dotenv').config()
 
@@ -20,6 +21,15 @@ async function deployLotteryGame() {
   // Wait for contract to be deployed
   await game.waitForDeployment()
   console.log('Contract deployed to: ', await game.getAddress())
+
+  const GameAddress = await game.getAddress();
+
+  const cardContractSigner = new quais.Contract(process.env.lotteryGameNFTCard, LotteryGameCardJson.abi, wallet)   
+  const txHash = await cardContractSigner.setLotteryGame(GameAddress);
+  await txHash.wait();
+  
+  const cardGameAddress = await cardContractSigner.lotteryGame();
+  console.log("cardGameAddress", cardGameAddress)
 }
 
 deployLotteryGame()
